@@ -50,12 +50,24 @@ Price: $$$
 Append this element to the div with the id of 
 "text4"*/
 
+function appendToText4(type,id,inside) {
+  var newThing = document.createElement("div");
+  newThing.id = id;
+  newThing.innerHTML = inside;
+  text4.appendChild(newThing);
+}
+appendToText4("div","price4","Price: $$$");
+
+
 /*Create a new div element with an id of "addy4". Inside this div element, give it the following info:
 
 Address: 1620 N. School St, Honolulu, HI 96817
 
 Append this element to the div with the id of 
 "text4"*/
+
+appendToText4("div","addy4", "Address: 1620 N. School St, Honolulu, HI 96817");
+
 
 /*Create a new div element with an id of "hours4". Inside this div element, give it the following info:
 
@@ -64,6 +76,7 @@ Hours: 9am - 10pm Sun - Sat
 Append this element to the div with the id of 
 "text4"
 */
+appendToText4("div","hours4","Hours: 9am - 10pm Sun - Sat");
 
 /*Create a paragraph element with an id of "update4". Inside this paragraph element, give it the following info:
 
@@ -71,6 +84,10 @@ I'd leave a blank space for this oxtail soup!
 
 Append this element to the div id of "comment4"*/
 
+var kamReview = document.createElement("p");
+kamReview.id = "update4";
+kamReview.innerHTML = "I'd leave a blank space for this oxtail soup!";
+comment4.appendChild(kamReview);
 
 //5. The Death Star Cafe
 /*The empire strikes back with a new and improved oxtail soup offering. Help the dark side win back customers by executing the following commands:*/
