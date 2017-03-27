@@ -111,3 +111,26 @@ hours5: Hours: We never close.
 Append the div elements to the div id "text5"
 */
 
+var idArray = ["name5","rating5","price5","addy5","hours5"];
+var pArray = ["5. The Death Star Cafe","Rating: 2 Stars","Price: $$", "Address: A galaxy far, far away.", "Hours: We never close."];
+console.log(idArray,pArray);
+
+function appendDiv(id,string) {
+  var newElement = document.createElement("div");
+  newElement.id = id;
+  newElement.innerHTML = string;
+  text5.appendChild(newElement);
+  console.log(newElement);
+}
+
+
+function arrayProcess(ids,strings) {
+  if(ids.length === strings.length) {
+    for(var i = 0;i<ids.length;i++) {
+      appendDiv(ids[i],strings[i]);
+    } 
+  }
+}
+
+arrayProcess(idArray,pArray);
+
